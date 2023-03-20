@@ -1,3 +1,5 @@
+**machine translation**
+
 # What is zMonitor_3rd_Core
 
 **zMonitor_3rd_Core** is based on Pascal to reproduce the core technology of China's third and fourth generation monitoring systems from 2004 to 2012.
