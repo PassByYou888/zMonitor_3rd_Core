@@ -11,7 +11,7 @@ Early monitoring system is a core recording system developed by 1-2 core program
 **zMonitor_3rd_Core** is also a key Z-AI update in version 1.4 because ZAI strips the recording system off to a separate subsystem, known as **zMonitor_3rd_Core**
 
 
-#Technical Composition System and Design
+# Technical Composition System and Design
 
 - **ZDB2**: This is a technology system that solves database problems by designing data engine independently. **ZDB2** supports parallelism, the underlying design framework of multi-threaded disk and data IO, and the requirements of peer-to-peer HPC servers. At the same time**ZDB2** also contains a series of peripheral support systems for designing data structures, chain tables, hash tables, dictionary tables, threads, etc. Combining this series of small technical solutions to form an autonomous data engine solution.
 - **The significance of ZDB2 in the monitoring system**: Video fragments are stored in **zdb2**, queries, statistics, when solving scrolling storage (delete the beginning and end of the video sequence), **zdb2** has a natural advantage, full disk, efficient scrolling storage, in addition, **zdb2** has a strong technical support system in system integration, transformation, multi-platform porting.
@@ -21,7 +21,7 @@ Early monitoring system is a core recording system developed by 1-2 core program
 - **Video Codec Technology**: My technical support system for video codec is mature in Z-AI application in business. The underlying layer uses **ffmpeg** for hardware acceleration. After comparing the same performance with native Pascal codec, I chose to rely on **ffmpeg**. In addition, there are many encapsulations for **ffmpeg** application scenarios, there are 5-6 scenarios in the decoding library alone. These include live broadcasting, push streaming, and so on. Common Technological Systems for Video Acquisition
 
 
-#Investability
+# Investability
 
 - From now on, the monitoring system in 2012 has been very popular in China. There is monitoring in any corner of the city. The core technology of these monitoring systems is on the one hand inexpensive and stable home-made monitoring heads (such as Haikangwei), on the other hand, the background recording system. These core technologies are not open, but very popular,**zMonitor_3rd_Core is an open source project for the complete decryption of the recording system from design to technology**
 - **zMonitor_3rd_Core** Skewed to Senior Technician in Technical Positioning, **zMonitor_3rd_Core** is not an open source technology solution for everyone to choose, but from the underlying design ideas to specific technology solutions, has made a full range of thinking about the need to commercialize some monitoring business, or want to enter the monitoring field, to teach users to master, rather than binding users to make choices,**zMonitor_ 3rd_ That's what Core** is doing.
@@ -29,7 +29,7 @@ Early monitoring system is a core recording system developed by 1-2 core program
 - **zMonitor_3rd_Core** is part of the technical solution of the Z-AI monitoring system. Z-AI is a long-term project that has been in ** with revolutionary updates at any time**
 
 
-#Open Source Policy
+# Policy
 
 - Technical level is initially positioned at senior programmer level
 - From the kernel library to the raster, the rendering engine and FFMPEG all use special headers to distinguish Passbyyou888's previous open source projects. In other words, there will be no library conflicts with earlier open source projects
