@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1A0BB540-0F1B-45C1-8D89-773F71A502B8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ZDB2_Core_Tech.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ZDB2_Thread_Tech.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="zMonitor_3rd_Core_Demo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ZDB2_Core_Tech">
+        <MSBuild Projects="ZDB2_Core_Tech.dproj"/>
+    </Target>
+    <Target Name="ZDB2_Core_Tech:Clean">
+        <MSBuild Projects="ZDB2_Core_Tech.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ZDB2_Core_Tech:Make">
+        <MSBuild Projects="ZDB2_Core_Tech.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ZDB2_Thread_Tech">
+        <MSBuild Projects="ZDB2_Thread_Tech.dproj"/>
+    </Target>
+    <Target Name="ZDB2_Thread_Tech:Clean">
+        <MSBuild Projects="ZDB2_Thread_Tech.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ZDB2_Thread_Tech:Make">
+        <MSBuild Projects="ZDB2_Thread_Tech.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="zMonitor_3rd_Core_Demo">
+        <MSBuild Projects="zMonitor_3rd_Core_Demo.dproj"/>
+    </Target>
+    <Target Name="zMonitor_3rd_Core_Demo:Clean">
+        <MSBuild Projects="zMonitor_3rd_Core_Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="zMonitor_3rd_Core_Demo:Make">
+        <MSBuild Projects="zMonitor_3rd_Core_Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ZDB2_Core_Tech;ZDB2_Thread_Tech;zMonitor_3rd_Core_Demo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ZDB2_Core_Tech:Clean;ZDB2_Thread_Tech:Clean;zMonitor_3rd_Core_Demo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ZDB2_Core_Tech:Make;ZDB2_Thread_Tech:Make;zMonitor_3rd_Core_Demo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
