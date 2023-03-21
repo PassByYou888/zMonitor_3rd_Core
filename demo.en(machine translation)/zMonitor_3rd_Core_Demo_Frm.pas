@@ -323,7 +323,7 @@ begin
   {  During the past 2006, if there were to be re coding here, multiple servers would be required for video processing. Today, a single HPC would do everything  }
   {  If you use recording and storage devices such as iot to store monitoring data, there is no need for re coding. Such devices cannot carry large-scale monitoring code streams and directly perform frame transfer, bypassing the raster decoding and encoding process  }
   try
-      r := TFFMPEG_Reader.Create(video_input_Edit.Text); {  Building a decoder from an address or file  }
+      r := TFFMPEG_Reader.Create(video_input_Edit.Text, reader_use_gpu_CheckBox.IsChecked); {  Building a decoder from an address or file  }
   except
       exit;
   end;
