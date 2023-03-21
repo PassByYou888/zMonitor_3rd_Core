@@ -323,7 +323,7 @@ begin
   // 在过去2006年期间,这里如果要做重编码,需要多台服务器进行视频处理,放到今天是单台hpc干完一切
   // 如果使用iot这类录存设备来存监控数据,重编码就不需要了,那种设备带不动大规模监控码流,直接做帧转存,绕过光栅解码编码环节
   try
-      r := TFFMPEG_Reader.Create(video_input_Edit.Text); // 从地址或文件构建解码器
+      r := TFFMPEG_Reader.Create(video_input_Edit.Text, reader_use_gpu_CheckBox.IsChecked); // 从地址或文件构建解码器
   except
       exit;
   end;
